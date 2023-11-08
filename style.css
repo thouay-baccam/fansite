@@ -1,0 +1,525 @@
+/* General */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+#navbar ul {
+    margin: 0;
+    padding: 20px;
+    list-style-type: none;
+    text-align: center;
+    background-color:  rgba(75, 75, 75, 0.57);
+}
+
+#navbar ul li {
+    display: inline;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    padding: .2em 1em;
+    color: #fff;
+}
+
+#navbar ul li a:hover {
+    color: #000;
+    background-color: #fff;
+}
+
+footer {
+    position: absolute;
+    width: 100%;
+    clear: both;
+    position: relative;
+    margin-top: 220px;
+    background-color:  rgba(75, 75, 75, 0.57);
+}
+
+#footer-navbar {
+    text-align: center;
+}
+
+#footer-navbar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#footer-navbar ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+#footer-navbar ul li a {
+    text-decoration: none;
+    color: white; /* Change this to the desired text color */
+    font-size: 14px;
+}
+
+
+
+/* Pour Accueil */
+
+body.accueil {
+    background: url(images/bg.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header.logohome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.audio-player {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.audio-player audio {
+    width: 100px;
+}
+
+.resume {
+    text-align: center;
+    margin-top: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+.metro-interface {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #161616b0;
+    padding: 20px;
+    margin-top: 90px;
+}
+
+.metro-tile {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    background-color: #007ACC;
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+}
+
+.image-container img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 5px;
+    object-fit: cover;
+    transform: scale(1);
+    filter: blur transition: filter 0.5s ease-in-out;
+}
+
+.image-container .image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(255, 0, 0);
+    font-size: 20px;
+    color: rgb(0, 106, 255);
+    padding: 5px 10px;
+    border-radius: 5px;
+    display: none;
+}
+
+.image-container:hover .image-text {
+    display: block;
+}
+
+.image-container:hover img {
+    animation: blurTransition 0.5s forwards;
+}
+
+@keyframes blurTransition {
+    0% {
+        filter: blur(0);
+    }
+
+    100% {
+        filter: blur(5px);
+    }
+}
+
+/* Pour News */
+
+body.news {
+    background: url(images/bg1.jpg);
+}
+
+.logopage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.instruct {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.news-box {
+    width: 200px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #000;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top:50px;
+    text-decoration: none;
+}
+
+.news-box img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.news-box h2 {
+    font-size: 15px;
+    background-color: rgba(0, 0, 0, 0.415);
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    justify-items: center;
+}
+
+.news-link {
+    text-decoration: none;
+    color: #ff0000;
+}
+
+.news-link:hover {
+    text-decoration: underline;
+    color: #ff0000;
+}
+
+/* Pour Fanart */
+
+body.fan {
+    background: url(images/bg2.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.mosaique {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.fanart {
+    border: 0px solid rgba(0, 0, 0, 0.621);
+    margin-top: 10px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.fanart img {
+    max-width: 100%;
+    height: auto;
+    width: 100%;
+    border-radius: 10px;
+    width: 157px;
+    height: 157px;
+    overflow: hidden;
+}
+
+body.fan {
+
+    background: url(images/bg2.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* Pour Discographie */
+
+body.disco {
+    background: url(images/bg3.png);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.logodisco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logodisco img {
+    width: 500px;
+    height: auto;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.album-box {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f7f7f77d;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 0px 0px 3px;
+    width: 200px;
+    height: 400px;
+}
+
+.album-box img {
+    max-width: 100%;
+    border: 1px solid black;
+    max-height: 60%;
+    border-radius: 10px;
+}
+
+.album-box h2 {
+    margin: 10px 0;
+    color: white;
+    font-size: 14px;
+}
+
+.album-box ul {
+    list-style: none;
+    padding: 0;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.album-box li {
+    margin: 5px 0;
+    font-size: 12px;
+}
+
+/* Pour Concert */
+
+body.concert {
+    background: url(images/bg4.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header.logohome {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logodisco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logodisco img {
+    width: 500px;
+    height: auto;
+}
+
+
+/* Pour Shop */
+
+body.merch {
+    background: url(images/bg5.png);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header.logomerch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logomerch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logomerch img {
+    width: 500px;
+    height: auto;
+}
+
+/* Pour Contact */
+
+body.contact {
+    background: url(images/bg6.jpg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-size: cover;
+    background-attachment: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+header.logocontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logocontact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.logocontact img {
+    width: 500px;
+    height: auto;
+}
+
+.contact-form {
+    background-color: rgba(0, 0, 0, 0.856);
+    padding: 15px;
+    border-radius: 10px;
+    color: white;
+    max-width: 400px;
+    margin: 20px auto;
+    margin-top:90px;
+    text-align: center; 
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  
+  .form-group {
+    text-align: center;
+  }
+  
+  .form-label {
+    color: white;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-input,
+  .form-select,
+  .form-textarea {
+    width: 75%;
+    padding: 5px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    text-align:center;
+    margin: 0 auto;
+  }
+  
+  .form-textarea {
+    height: 100px;
+    resize: none;
+    overflow-y: auto;
+  }
+  
+
+
+  .form-button {
+    background-color:  	#43858b;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .form-button:hover {
+    background-color:  	#43858b;
+  }
