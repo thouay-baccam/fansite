@@ -17,7 +17,7 @@ body {
     padding: 20px;
     list-style-type: none;
     text-align: center;
-    background-color:  rgba(75, 75, 75, 0.57);
+    background-color: rgba(75, 75, 75, 0.57);
 }
 
 #navbar ul li {
@@ -41,7 +41,7 @@ footer {
     clear: both;
     position: relative;
     margin-top: 220px;
-    background-color:  rgba(75, 75, 75, 0.57);
+    background-color: rgba(75, 75, 75, 0.57);
 }
 
 #footer-navbar {
@@ -60,7 +60,8 @@ footer {
 
 #footer-navbar ul li a {
     text-decoration: none;
-    color: white; /* Change this to the desired text color */
+    color: white;
+    /* Change this to the desired text color */
     font-size: 14px;
 }
 
@@ -139,7 +140,7 @@ header.logohome {
     border-radius: 5px;
     object-fit: cover;
     transform: scale(1);
-    filter: blur transition: filter 0.5s ease-in-out;
+    transition: filter 0.5s ease-in-out;
 }
 
 .image-container .image-text {
@@ -201,20 +202,53 @@ body.news {
     padding: 10px;
     border-radius: 10px;
     margin: 10px;
-    margin-top:50px;
+    margin-top: 50px;
     text-decoration: none;
+    position: relative;
+    /* Add this line */
+    overflow: hidden;
+    /* Add this line to hide image overflow */
 }
 
 .news-box img {
     max-width: 100%;
     max-height: 100%;
+    transition: filter 0.3s;
+    /* Add transition for filter property */
+}
+
+.news-box:hover img {
+    filter: blur(5px);
+    /* Apply blur effect when hovering */
 }
 
 .news-box h2 {
     font-size: 15px;
     background-color: rgba(0, 0, 0, 0.415);
     border-radius: 4px;
-    margin-top: 10px;
+    position: absolute;
+    /* Add this line */
+    top: 50%;
+    /* Position the text vertically at the center */
+    left: 50%;
+    /* Position the text horizontally at the center */
+    transform: translate(-50%, -50%);
+    /* Center the text using transform */
+    width: 100%;
+    /* Make the text span the entire box width */
+    padding: 10px;
+    /* Add padding for better appearance */
+    color: #fff;
+    /* Text color */
+    opacity: 0;
+    /* Initially hide the text */
+    transition: opacity 0.3s;
+    /* Add a smooth transition for opacity */
+}
+
+.news-box:hover h2 {
+    opacity: 1;
+    /* Show the text when hovering over the news box */
 }
 
 .news-grid {
@@ -393,6 +427,55 @@ header.logohome {
     height: auto;
 }
 
+table {
+    width: 80%;
+    /* Largeur du tableau (ajustez selon vos besoins) */
+    margin: 0 auto;
+    /* Centre le tableau horizontalement */
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 50px;
+    background-color: #f7f7f7;
+    /* Couleur de fond du tableau */
+    font-family: Arial, sans-serif;
+    /* Police de caractères */
+    border-radius: 10px;
+    /* Coins arrondis du contour du tableau */
+    overflow: hidden;
+    /* Cacher le débordement des cellules */
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    /* Bordures des cellules */
+    padding: 12px;
+    /* Espacement interne des cellules */
+    text-align: center;
+    /* Alignement du texte à gauche */
+}
+
+th {
+    background-color: #333;
+    /* Couleur de fond de l'en-tête */
+    color: white;
+    /* Couleur du texte de l'en-tête */
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+    /* Couleur de fond des lignes paires */
+}
+
+a {
+    text-decoration: none;
+    /* Enlève le soulignement des liens */
+    color: #007BFF;
+    /* Couleur des liens */
+    font-weight: bold;
+    /* Texte en gras */
+}
+
 
 /* Pour Shop */
 
@@ -427,6 +510,48 @@ header.logomerch {
     width: 500px;
     height: auto;
 }
+
+.merch-grid {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+.merch-item {
+    width: 300px;
+    margin: 10px;
+    text-align: center;
+}
+
+.merch-item img {
+    max-width: 100%;
+    border: 5px solid #000000;
+    border-radius: 5px;
+}
+
+.product-price {
+    font-size: 16px;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.buy-button {
+    display: block;
+    background-color: #1eff00;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
 
 /* Pour Contact */
 
@@ -469,28 +594,28 @@ header.logocontact {
     color: white;
     max-width: 400px;
     margin: 20px auto;
-    margin-top:90px;
-    text-align: center; 
-  }
-  
-  .contact-form h2 {
+    margin-top: 90px;
+    text-align: center;
+}
+
+.contact-form h2 {
     text-align: center;
     margin-bottom: 10px;
-  }
-  
-  .form-group {
+}
+
+.form-group {
     text-align: center;
-  }
-  
-  .form-label {
+}
+
+.form-label {
     color: white;
     display: block;
     margin-bottom: 5px;
-  }
-  
-  .form-input,
-  .form-select,
-  .form-textarea {
+}
+
+.form-input,
+.form-select,
+.form-textarea {
     width: 75%;
     padding: 5px;
     margin: 6px 0;
@@ -498,28 +623,28 @@ header.logocontact {
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.1);
     color: white;
-    text-align:center;
+    text-align: center;
     margin: 0 auto;
-  }
-  
-  .form-textarea {
+}
+
+.form-textarea {
     height: 100px;
     resize: none;
     overflow-y: auto;
-  }
-  
+}
 
 
-  .form-button {
-    background-color:  	#43858b;
+
+.form-button {
+    background-color: #43858b;
     color: white;
     border: none;
     padding: 8px 15px;
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
-  }
-  
-  .form-button:hover {
-    background-color:  	#43858b;
-  }
+}
+
+.form-button:hover {
+    background-color: #43858b;
+}
